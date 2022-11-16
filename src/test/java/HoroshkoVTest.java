@@ -3,10 +3,12 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
+import java.time.Duration;
 import java.util.ArrayList;
 
 public class HoroshkoVTest {
@@ -14,12 +16,8 @@ public class HoroshkoVTest {
     static final String GUIDE = "//div[@id='desktop-menu']//a[text()='Guide']";
 
 
-    @Test
-    public void TC_11_01_TestNameTitleAndUrlPageGuide() throws InterruptedException {
-        System.setProperty("webdriver.chrome.driver", "D:\\JavaProject\\webdriwer\\chromedriver.exe");
-        String expectedResultTiltle = "OpenWeatherMap API guide - OpenWeatherMap";
-        String expectedResultUrl = "https://openweathermap.org/guide";
-        WebDriver driver = new ChromeDriver();
+  /*  @Test
+    pub
         driver.get(URL);
         Thread.sleep(5000);
         driver.manage().window().maximize();
@@ -30,7 +28,7 @@ public class HoroshkoVTest {
         Assert.assertEquals(actualResultUrl, expectedResultUrl);
         driver.quit();
 
-    }
+    }*/
 
     @Test
     public void TC_11_01_TestNameUrlPageGuide() throws InterruptedException {

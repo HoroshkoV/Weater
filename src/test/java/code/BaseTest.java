@@ -6,11 +6,13 @@ import org.testng.annotations.*;
 
 import java.time.Duration;
 
-public class BaseTest {
+public abstract class BaseTest {
+
     private WebDriver driver;
     private WebDriverWait webDriverWait20;
     private WebDriverWait webDriverWait10;
     private WebDriverWait webDriverWait5;
+
 
     @BeforeMethod
     protected void beforeMethod() {
@@ -23,12 +25,12 @@ public class BaseTest {
         webDriverWait20 = null;
         webDriverWait10 = null;
         webDriverWait5 = null;
+
     }
 
     protected WebDriver getDriver() {
         return driver;
     }
-/*
     protected WebDriverWait getWait20() {
         if (webDriverWait20 == null) {
             webDriverWait20 = new WebDriverWait(driver, Duration.ofSeconds(20));
@@ -51,5 +53,5 @@ public class BaseTest {
         }
 
         return webDriverWait5;
-    }*/
+    }
 }

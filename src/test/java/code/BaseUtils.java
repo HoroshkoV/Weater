@@ -1,4 +1,5 @@
 package code;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -6,11 +7,11 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.time.Duration;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
-public class BaseUtils {
+public final class BaseUtils {
+
     private static final String ENV_CHROME_OPTIONS = "CHROME_OPTIONS";
 
     static final String PREFIX_PROP = "default.";
@@ -23,7 +24,7 @@ public class BaseUtils {
         if (properties == null) {
             properties = new Properties();
             if (isServerRun()) {
-                properties.setProperty(PROP_CHROME_OPTIONS, System.getenv(ENV_CHROME_OPTIONS));
+                 properties.setProperty(PROP_CHROME_OPTIONS, System.getenv(ENV_CHROME_OPTIONS));
             } else {
                 try {
                     InputStream inputStream = BaseUtils.class.getClassLoader().getResourceAsStream("local.properties");
@@ -64,8 +65,7 @@ public class BaseUtils {
 
     static WebDriver createDriver() {
         WebDriver driver = new ChromeDriver(chromeOptions);
-        //driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
-     //   driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         return driver;
     }
