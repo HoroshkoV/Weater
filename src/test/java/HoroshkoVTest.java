@@ -4,40 +4,30 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.List;
 
 public class HoroshkoVTest {
-    String url = "https://openweathermap.org/";
-    String guide = "//div[@id='desktop-menu']//a[text()='Guide']";
-    String fahrenheitSwitch = "//div[(text()='Imperial: °F, mph')]";
-    String cookiesText = "//p[@class='stick-footer-panel__description']";
+    static final String URL = "https://openweathermap.org/";
+    static final String GUIDE = "//div[@id='desktop-menu']//a[text()='Guide']";
 
 
     @Test
     public void TC_11_01_TestNameTitleAndUrlPageGuide() throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "D:\\JavaProject\\webdriwer\\chromedriver.exe");
-        String expectedResultTiltle = "OpenWeatherMap AP I guide - OpenWeatherMap";
-        String expectedResultUrl = "https://openweathermap.org/quide";
+        String expectedResultTiltle = "OpenWeatherMap API guide - OpenWeatherMap";
+        String expectedResultUrl = "https://openweathermap.org/guide";
         WebDriver driver = new ChromeDriver();
-        driver.get(url);
+        driver.get(URL);
         Thread.sleep(5000);
         driver.manage().window().maximize();
-        driver.findElement(By.xpath(guide)).click();
+        driver.findElement(By.xpath(GUIDE)).click();
         String actualResultTitle = driver.getTitle();
         String actualResultUrl = driver.getCurrentUrl();
-        try {
-            Assert.assertEquals(actualResultTitle, expectedResultTiltle);
-        }catch (Exception e){
-            System.out.println("Error");
-        }
-
-        Assert.assertEquals(actualResultUrl,expectedResultUrl);
+        Assert.assertEquals(actualResultTitle, expectedResultTiltle);
+        Assert.assertEquals(actualResultUrl, expectedResultUrl);
         driver.quit();
 
     }
@@ -47,10 +37,10 @@ public class HoroshkoVTest {
         System.setProperty("webdriver.chrome.driver", "D:\\JavaProject\\webdriwer\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         String expectedResul = "https://openweathermap.org/guide";
-        driver.get(url);
+        driver.get(URL);
         Thread.sleep(5000);
         driver.manage().window().maximize();
-        driver.findElement(By.xpath(guide)).click();
+        driver.findElement(By.xpath(GUIDE)).click();
         String actualResult = driver.getCurrentUrl();
         Assert.assertEquals(actualResult, expectedResul);
         driver.quit();
@@ -61,10 +51,10 @@ public class HoroshkoVTest {
         System.setProperty("webdriver.chrome.driver", "D:\\JavaProject\\webdriwer\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         char expectedResul = 'F';
-        driver.get(url);
+        driver.get(URL);
         Thread.sleep(5000);
         driver.manage().window().maximize();
-        driver.findElement(By.xpath(fahrenheitSwitch)).click();
+        driver.findElement(By.xpath("//div[(text()='Imperial: °F, mph')]")).click();
         String f = driver.findElement(By.xpath("//span[@class='heading']")).getText();
         char actualResult = f.charAt(f.length() - 1);
         Assert.assertEquals(actualResult, expectedResul);
@@ -78,10 +68,10 @@ public class HoroshkoVTest {
         String expectedResul = "We use cookies which are essential for the site to work. We also use non-essential cookies"
                 + " to help us improve our services. Any data collected is anonymised. You can allow all cookies or"
                 + " manage them individually.";
-        driver.get(url);
+        driver.get(URL);
         Thread.sleep(5000);
         driver.manage().window().maximize();
-        String actualResult = driver.findElement(By.xpath(cookiesText)).getText();
+        String actualResult = driver.findElement(By.xpath("//p[@class='stick-footer-panel__description']")).getText();
         Assert.assertEquals(actualResult, expectedResul);
         driver.quit();
     }
@@ -91,7 +81,7 @@ public class HoroshkoVTest {
         System.setProperty("webdriver.chrome.driver", "D:\\JavaProject\\webdriwer\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         String expectedResul = "";
-        driver.get(url);
+        driver.get(URL);
         Thread.sleep(5000);
         driver.manage().window().maximize();
         boolean actualResult = driver.findElement(By.xpath("//button[text()='Allow all']")).isDisplayed();
@@ -104,7 +94,7 @@ public class HoroshkoVTest {
         System.setProperty("webdriver.chrome.driver", "D:\\JavaProject\\webdriwer\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         String expectedResul = "";
-        driver.get(url);
+        driver.get(URL);
         Thread.sleep(5000);
         driver.manage().window().maximize();
         boolean actualResult = driver.findElement(By.xpath("//a[@href='/cookies-settings']")).isDisplayed();
@@ -117,7 +107,7 @@ public class HoroshkoVTest {
         System.setProperty("webdriver.chrome.driver", "D:\\JavaProject\\webdriwer\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         String expectedResul = "FAQ";
-        driver.get(url);
+        driver.get(URL);
         Thread.sleep(5000);
         driver.manage().window().maximize();
         driver.findElement(By.xpath("//div[@id='support-dropdown']")).click();
@@ -131,7 +121,7 @@ public class HoroshkoVTest {
         System.setProperty("webdriver.chrome.driver", "D:\\JavaProject\\webdriwer\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         String expectedResul = "How to start";
-        driver.get(url);
+        driver.get(URL);
         Thread.sleep(5000);
         driver.manage().window().maximize();
         driver.findElement(By.xpath("//div[@id='support-dropdown']")).click();
@@ -146,7 +136,7 @@ public class HoroshkoVTest {
         System.setProperty("webdriver.chrome.driver", "D:\\JavaProject\\webdriwer\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         String expectedResul = "Ask a question";
-        driver.get(url);
+        driver.get(URL);
         Thread.sleep(5000);
         driver.manage().window().maximize();
         driver.findElement(By.xpath("//div[@id='support-dropdown']")).click();
@@ -161,7 +151,7 @@ public class HoroshkoVTest {
         System.setProperty("webdriver.chrome.driver", "D:\\JavaProject\\webdriwer\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         String expectedResul = "reCAPTCHA verification failed, please try again.";
-        driver.get(url);
+        driver.get(URL);
         Thread.sleep(5000);
         driver.manage().window().maximize();
         driver.findElement(By.xpath("//div[@id='support-dropdown']")).click();
@@ -180,12 +170,13 @@ public class HoroshkoVTest {
         driver.quit();
     }
 
+    @Ignore
     @Test
     public void TV_11_06_TestClearEmail() throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "D:\\JavaProject\\webdriwer\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         String expectedResul = "can't be blank";
-        driver.get(url);
+        driver.get(URL);
         Thread.sleep(5000);
         driver.manage().window().maximize();
         driver.findElement(By.xpath("//div[@id='support-dropdown']")).click();
@@ -207,11 +198,12 @@ public class HoroshkoVTest {
         driver.quit();
     }
 
+    @Ignore
     @Test
     public void TC_11_07_Test_Switching_With_F_In_C() throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "D:\\JavaProject\\webdriwer\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
-        driver.get(url);
+        driver.get(URL);
         Thread.sleep(5000);
         driver.manage().window().maximize();
         driver.findElement(By.xpath("//div[(text()='Imperial: °F, mph')]")).click();
@@ -226,7 +218,7 @@ public class HoroshkoVTest {
     public void TC_11_08_Test_Start_page() throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "D:\\JavaProject\\webdriwer\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
-        driver.get(url);
+        driver.get(URL);
         Thread.sleep(5000);
         driver.manage().window().maximize();
         String expectedResul = driver.getCurrentUrl();
@@ -241,7 +233,7 @@ public class HoroshkoVTest {
     public void TC_11_09_Test_Search_check() throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "D:\\JavaProject\\webdriwer\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
-        driver.get(url);
+        driver.get(URL);
         Thread.sleep(5000);
         driver.manage().window().maximize();
         String city = "Rome";
@@ -252,11 +244,12 @@ public class HoroshkoVTest {
         Assert.assertEquals(find.equalsIgnoreCase(city), url.contains("find?q=".concat(find)));
         driver.quit();
     }
+
     @Test
     public void TC_11_10_Find_Orange_Button() throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "D:\\JavaProject\\webdriwer\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
-        driver.get(url);
+        driver.get(URL);
         Thread.sleep(5000);
         driver.manage().window().maximize();
         driver.findElement(By.xpath("//div[@id='desktop-menu']//a[@href='/api']")).click();
