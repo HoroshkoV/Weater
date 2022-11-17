@@ -28,7 +28,7 @@ public class BaseTest {
     protected WebDriver getDriver() {
         return driver;
     }
-/*
+
     protected WebDriverWait getWait20() {
         if (webDriverWait20 == null) {
             webDriverWait20 = new WebDriverWait(driver, Duration.ofSeconds(20));
@@ -51,5 +51,5 @@ public class BaseTest {
         }
 
         return webDriverWait5;
-    }*/
+    }
 }
