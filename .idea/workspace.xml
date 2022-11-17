@@ -6,10 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="90d3e51f-d011-471a-ad5c-e4fc2cb33911" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/FunctionalAutomaticTestWeather.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/FunctionalAutomaticTestWeather.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/code/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/code/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/HoroshkoVTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/HoroshkoVTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,8 +53,11 @@
       <recent name="D:\JavaProject\Weather\src\test" />
       <recent name="D:\JavaProject\Weather\src\test\java\code" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\JavaProject\Weather\src\main\resources" />
+    </key>
   </component>
-  <component name="RunManager" selected="TestNG.FunctionalAutomaticTestWeather.checkTicket">
+  <component name="RunManager" selected="TestNG.FunctionalAutomaticTestWeather.testUrlApi">
     <configuration name="practik" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="practik" />
       <module name="Weather" />
@@ -70,6 +70,18 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="FunctionalAutomaticTestWeather" />
       <option name="METHOD_NAME" value="checkTicket" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FunctionalAutomaticTestWeather.testUrlApi" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Weather" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="FunctionalAutomaticTestWeather" />
+      <option name="METHOD_NAME" value="testUrlApi" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -100,25 +112,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HoroshkoVTest.TC_11_09_Test_Search_check" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Weather" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="HoroshkoVTest" />
-      <option name="METHOD_NAME" value="TC_11_09_Test_Search_check" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.FunctionalAutomaticTestWeather.testUrlApi" />
         <item itemvalue="TestNG.FunctionalAutomaticTestWeather.checkTicket" />
         <item itemvalue="TestNG.HoroshkoVTest.TC_11_01_TestNameTitleAndUrlPageGuide" />
         <item itemvalue="TestNG.HoroshkoVTest" />
         <item itemvalue="Application.practik" />
-        <item itemvalue="TestNG.HoroshkoVTest.TC_11_09_Test_Search_check" />
       </list>
     </recent_temporary>
   </component>

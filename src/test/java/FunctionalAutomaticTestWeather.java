@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 import java.time.Duration;
 public class FunctionalAutomaticTestWeather extends BaseTest{
     final static String BASE_URL = "https://openweathermap.org/";
-    final static By GUIDI = By.xpath("//div[@id='desktop-menu']//a[text()='Guide']");
+    final static By API = By.xpath("//div[@id='desktop-menu']//a[text()='API']");
 
     private void openBaseURL() {
         getDriver().get(BASE_URL);
@@ -22,12 +22,12 @@ public class FunctionalAutomaticTestWeather extends BaseTest{
     }
 
     @Test
-    public void checkTicket(){
-        String expectedResul = "https://openweathermap.org/guide";
+    public void testUrlApi(){
+        String expectedResul = "https://openweathermap.org/api";
         openBaseURL();
         getDriver().manage().window().maximize();
         waitForGrayFrameDisappered();
-        click(GUIDI);
+        click(API);
         Assert.assertEquals(getDriver().getCurrentUrl(), expectedResul);
 
 
