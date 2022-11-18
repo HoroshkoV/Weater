@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="90d3e51f-d011-471a-ad5c-e4fc2cb33911" name="Changes" comment="">
+    <list default="true" id="ec9094fd-336c-42ec-b694-16d390494f43" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/FunctionalAutomaticTestWeather.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/FunctionalAutomaticTestWeather.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/code/BaseUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/code/BaseUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/FunctionalAutomaticTestWeather.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/FunctionalAutomaticTestWeather.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -15,104 +14,13 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
-  </component>
-  <component name="ProjectId" id="2H4m36wRy7N6d7uIHBBYdJSqvul" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/JavaProject/Weather/src/test&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
-  }
-}</component>
-  <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="code" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\JavaProject\Weather\src\test" />
-      <recent name="D:\JavaProject\Weather\src\test\java\code" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\JavaProject\Weather\src\main\resources" />
-    </key>
-  </component>
-  <component name="RunManager" selected="TestNG.FunctionalAutomaticTestWeather.testUrlGuide">
-    <configuration name="FunctionalAutomaticTestWeather.testUrlApi" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager">
+    <configuration name="FunctionalAutomaticTestWeather.testUrlSupportFAQ" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Weather" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="FunctionalAutomaticTestWeather" />
-      <option name="METHOD_NAME" value="testUrlApi" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FunctionalAutomaticTestWeather.testUrlGuide" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Weather" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="FunctionalAutomaticTestWeather" />
-      <option name="METHOD_NAME" value="testUrlGuide" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FunctionalAutomaticTestWeather.testUrlMaps" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Weather" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="FunctionalAutomaticTestWeather" />
-      <option name="METHOD_NAME" value="testUrlMaps" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FunctionalAutomaticTestWeather.testUrlMarketplace" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Weather" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="FunctionalAutomaticTestWeather" />
-      <option name="METHOD_NAME" value="testUrlMarketplace" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FunctionalAutomaticTestWeather.testUrlPricing" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Weather" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="FunctionalAutomaticTestWeather" />
-      <option name="METHOD_NAME" value="testUrlPricing" />
+      <option name="METHOD_NAME" value="testUrlSupportFAQ" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -122,34 +30,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.FunctionalAutomaticTestWeather.testUrlGuide" />
-        <item itemvalue="TestNG.FunctionalAutomaticTestWeather.testUrlMaps" />
-        <item itemvalue="TestNG.FunctionalAutomaticTestWeather.testUrlPricing" />
-        <item itemvalue="TestNG.FunctionalAutomaticTestWeather.testUrlMarketplace" />
-        <item itemvalue="TestNG.FunctionalAutomaticTestWeather.testUrlApi" />
+        <item itemvalue="TestNG.FunctionalAutomaticTestWeather.testUrlSupportFAQ" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="90d3e51f-d011-471a-ad5c-e4fc2cb33911" name="Changes" comment="" />
-      <created>1667552529377</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1667552529377</updated>
-    </task>
     <servers />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
 </project>

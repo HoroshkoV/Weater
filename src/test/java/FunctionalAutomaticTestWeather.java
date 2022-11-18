@@ -14,6 +14,15 @@ public class FunctionalAutomaticTestWeather extends BaseTest {
     final static By MARKETPLACE = By.xpath("//div[@id='desktop-menu']//a[text()='Marketplace']");
     final static By PRICING = By.xpath("//div[@id='desktop-menu']//a[text()='Pricing']");
     final static By MAPS = By.xpath("//div[@id='desktop-menu']//a[text()='Maps']");
+    final static By OUR_INITIATIVES = By.xpath("//div[@id='desktop-menu']//a[text()='Our Initiatives']");
+    final static By PARTNERS = By.xpath("//div[@id='desktop-menu']//a[text()='Partners']");
+    final static By BLOG = By.xpath("//div[@id='desktop-menu']//a[text()='Blog']");
+    final static By FOR_BUSINESS = By.xpath("//div[@id='desktop-menu']//a[text()='For Business']");
+    final static By SIGN_IN = By.xpath("//div[@id='desktop-menu']//a[text()='Sign in']");
+    final static By SUPPORT = By.id("support-dropdown");
+    final static By FAQ = By.xpath("//ul[@id='support-dropdown-menu']//a[text()='FAQ']");
+    final static By HOW_TO_STAR = By.xpath("//ul[@id='support-dropdown-menu']//a[text()='How to start']");
+    final static By ASK_A_QUESTION = By.xpath("//ul[@id='support-dropdown-menu']//a[text()='Ask a question']");
 
     private void openBaseURL() {
         getDriver().get(BASE_URL);
@@ -88,7 +97,77 @@ public class FunctionalAutomaticTestWeather extends BaseTest {
         getDriver().manage().window().maximize();
         waitForGrayFrameDisappered();
         click(MAPS);
-        System.out.println(getDriver().getCurrentUrl());
         Assert.assertTrue(getDriver().getCurrentUrl().contains(expectedResul));
     }
+
+    @Test
+    public void testUrlOurInitiatives() {
+        String expectedResul = "https://openweathermap.org/our-initiatives";
+        openBaseURL();
+        getDriver().manage().window().maximize();
+        waitForGrayFrameDisappered();
+        click(OUR_INITIATIVES);
+        Assert.assertEquals(getDriver().getCurrentUrl(), expectedResul);
+    }
+
+    @Test
+    public void testUrlPartners() {
+        String expectedResul = "https://openweathermap.org/our-initiatives";
+        openBaseURL();
+        getDriver().manage().window().maximize();
+        waitForGrayFrameDisappered();
+        click(PARTNERS);
+        Assert.assertEquals(getDriver().getCurrentUrl(), expectedResul);
+    }
+
+
+    @Test
+    public void testUrlBlog() {
+        String expectedResul = "https://openweather.co.uk/blog/category/weather";
+        openBaseURL();
+        getDriver().manage().window().maximize();
+        waitForGrayFrameDisappered();
+        click(BLOG);
+        ArrayList<String> windows = new ArrayList(getDriver().getWindowHandles());
+        getDriver().close();
+        Assert.assertEquals(getDriver().switchTo().window(windows.get(1)).getCurrentUrl(), expectedResul);
+    }
+
+    @Test
+    public void testUrlForBusiness() {
+        String expectedResul = "https://openweather.co.uk/";
+        openBaseURL();
+        getDriver().manage().window().maximize();
+        waitForGrayFrameDisappered();
+        click(FOR_BUSINESS);
+        ArrayList<String> windows = new ArrayList(getDriver().getWindowHandles());
+        getDriver().close();
+        Assert.assertEquals(getDriver().switchTo().window(windows.get(1)).getCurrentUrl(), expectedResul);
+    }
+
+    @Test
+    public void testUrlSignIn() {
+        String expectedResul = "https://home.openweathermap.org/users/sign_in";
+        openBaseURL();
+        getDriver().manage().window().maximize();
+        waitForGrayFrameDisappered();
+        click(SIGN_IN);
+        Assert.assertEquals(getDriver().getCurrentUrl(), expectedResul);
+    }
+
+    @Test
+    public void testUrlSupportFAQ() {
+        String expectedResul = "https://openweathermap.org/faq";
+        openBaseURL();
+        getDriver().manage().window().maximize();
+        waitForGrayFrameDisappered();
+        click(SIGN_IN);
+        waitForGrayFrameDisappered();
+        click(FAQ);
+        waitForGrayFrameDisappered();
+        System.out.println(getDriver().getCurrentUrl());
+        Assert.assertEquals(getDriver().getCurrentUrl(), expectedResul);
+    }
+
+
 }
