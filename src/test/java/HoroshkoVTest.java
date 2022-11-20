@@ -9,9 +9,39 @@ import org.testng.annotations.Test;
 
 import java.util.ArrayList;
 
-public class HoroshkoVTest {
+public class HoroshkoVTest  {
     static final String URL = "https://openweathermap.org/";
     static final String GUIDE = "//div[@id='desktop-menu']//a[text()='Guide']";
+    final static String BASE_URL = "https://openweathermap.org/";
+    final static By API = By.xpath("//div[@id='desktop-menu']//a[text()='API']");
+    final static By GUIDEby = By.xpath("//div[@id='desktop-menu']//a[text()='Guide']");
+    final static By DASHBOARD = By.xpath("//div[@id='desktop-menu']//a[text()='Dashboard']");
+    final static By MARKETPLACE = By.xpath("//div[@id='desktop-menu']//a[text()='Marketplace']");
+    final static By PRICING = By.xpath("//div[@id='desktop-menu']//a[text()='Pricing']");
+    final static By MAPS = By.xpath("//div[@id='desktop-menu']//a[text()='Maps']");
+    final static By OUR_INITIATIVES = By.xpath("//div[@id='desktop-menu']//a[text()='Our Initiatives']");
+    final static By PARTNERS = By.xpath("//div[@id='desktop-menu']//a[text()='Partners']");
+    final static By BLOG = By.xpath("//div[@id='desktop-menu']//a[text()='Blog']");
+    final static By FOR_BUSINESS = By.xpath("//div[@id='desktop-menu']//a[text()='For Business']");
+    final static By SIGN_IN = By.xpath("//div[@id='desktop-menu']//a[text()='Sign in']");
+    final static By SUPPORT = By.id("support-dropdown");
+    final static By FAQ = By.xpath("//ul[@id='support-dropdown-menu']//a[text()='FAQ']");
+    final static By HOW_TO_STAR = By.xpath("//ul[@id='support-dropdown-menu']//a[text()='How to start']");
+    final static By ASK_A_QUESTION = By.xpath("//ul[@id='support-dropdown-menu']//a[text()='Ask a question']");
+    final static By H_1 = By.tagName("h1");
+    final static By H_2 = By.tagName("//span[(text()='Weather forecasts, nowcasts and history in a fast and elegant way')]");
+
+    /*private void openBaseURL() {
+        getDriver().get(BASE_URL);
+    }
+
+    private void waitForGrayFrameDisappered() {
+        getWait10().until(ExpectedConditions.invisibilityOfElementLocated(By.className("owm-loader-container")));
+    }
+
+    private void click(By by) {
+        getDriver().findElement(by).click();
+    }*/
 
 
     @Test
@@ -256,4 +286,60 @@ public class HoroshkoVTest {
         ArrayList<String> button = new ArrayList(driver.findElements(By.xpath("//a[(@class='btn_block orange round') or contains(@class, 'ow-btn round btn-orange') ]")));
 
     }
+
+    @Test
+    public void testUrlSupportHowToStart() throws InterruptedException {
+        System.setProperty("webdriver.chrome.driver", "D:\\JavaProject\\webdriwer\\chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
+        String expectedResul = "https://openweathermap.org/appid";
+        driver.get(URL);
+        Thread.sleep(5000);
+        driver.manage().window().maximize();
+        driver.findElement(By.xpath("//div[@id='support-dropdown']")).click();
+        driver.findElement(By.xpath("//ul[@id='support-dropdown-menu']//a[text()='How to start']")).click();
+        System.out.println(driver.getCurrentUrl());
+        Assert.assertEquals(driver.getCurrentUrl(), expectedResul);
+        driver.quit();
+    }@Test
+    public void testUrlSupportAskAQuestion() throws InterruptedException {
+        System.setProperty("webdriver.chrome.driver", "D:\\JavaProject\\webdriwer\\chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
+        String expectedResul = "https://home.openweathermap.org/questions";
+        driver.get(URL);
+        Thread.sleep(5000);
+        driver.manage().window().maximize();
+        driver.findElement(By.xpath("//div[@id='support-dropdown']")).click();
+        driver.findElement(By.xpath("//ul[@id='support-dropdown-menu']//a[text()='Ask a question']")).click();
+        ArrayList<String> windows = new ArrayList(driver.getWindowHandles());
+        driver.close();
+        Assert.assertEquals(driver.switchTo().window(windows.get(1)).getCurrentUrl(), expectedResul);
+        Assert.assertEquals(driver.getCurrentUrl(), expectedResul);
+        driver.quit();
+    }
+    @Test
+    public void testH1ValidName() throws InterruptedException {
+        System.setProperty("webdriver.chrome.driver", "D:\\JavaProject\\webdriwer\\chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
+        String expectedResul = "OpenWeather";
+        driver.get(URL);
+        driver.manage().window().maximize();
+        Thread.sleep(5000);
+        Assert.assertEquals(driver.findElement(H_1).getText(), expectedResul);
+        driver.quit();
+    }@Test
+    public void testH2ValidName() throws InterruptedException {
+        System.setProperty("webdriver.chrome.driver", "D:\\JavaProject\\webdriwer\\chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
+        String expectedResul = "Weather forecasts, nowcasts and history in a fast and elegant way";
+        driver.get(URL);
+        driver.manage().window().maximize();
+        Thread.sleep(5000);
+        Assert.assertEquals(driver.findElement(H_2).getText(), expectedResul);
+        driver.quit();
+    }
 }
+
+/*
+<a href="/appid">How to start</a>
+//*[@id="support-dropdown-menu"]/li[2]/a
+        https://openweathermap.org/appid*/

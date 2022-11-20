@@ -7,20 +7,87 @@
     <list default="true" id="ec9094fd-336c-42ec-b694-16d390494f43" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/FunctionalAutomaticTestWeather.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/FunctionalAutomaticTestWeather.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/HoroshkoVTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/HoroshkoVTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/FunctionalAutomaticTestWeather.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/FunctionalAutomaticTestWeather.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/HoroshkoVTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/HoroshkoVTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2HjVmlAlmG3faQYBbdXV3OU2aGt" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="RunManager">
-    <configuration name="FunctionalAutomaticTestWeather.testUrlSupportFAQ" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager" selected="TestNG.HoroshkoVTest.testH2ValidName">
+    <configuration name="FunctionalAutomaticTestWeather.testH1ValidName" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Weather" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="FunctionalAutomaticTestWeather" />
-      <option name="METHOD_NAME" value="testUrlSupportFAQ" />
+      <option name="METHOD_NAME" value="testH1ValidName" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FunctionalAutomaticTestWeather.testUrlSupportAskAQuestion" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Weather" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="FunctionalAutomaticTestWeather" />
+      <option name="METHOD_NAME" value="testUrlSupportAskAQuestion" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HoroshkoVTest.testH1ValidName" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Weather" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="HoroshkoVTest" />
+      <option name="METHOD_NAME" value="testH1ValidName" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HoroshkoVTest.testH2ValidName" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Weather" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="HoroshkoVTest" />
+      <option name="METHOD_NAME" value="testH2ValidName" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HoroshkoVTest.testUrlSupportAskAQuestion" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Weather" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="HoroshkoVTest" />
+      <option name="METHOD_NAME" value="testUrlSupportAskAQuestion" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -30,11 +97,23 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.FunctionalAutomaticTestWeather.testUrlSupportFAQ" />
+        <item itemvalue="TestNG.HoroshkoVTest.testH2ValidName" />
+        <item itemvalue="TestNG.FunctionalAutomaticTestWeather.testH1ValidName" />
+        <item itemvalue="TestNG.HoroshkoVTest.testH1ValidName" />
+        <item itemvalue="TestNG.HoroshkoVTest.testUrlSupportAskAQuestion" />
+        <item itemvalue="TestNG.FunctionalAutomaticTestWeather.testUrlSupportAskAQuestion" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ec9094fd-336c-42ec-b694-16d390494f43" name="Changes" comment="" />
+      <created>1668798658514</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1668798658514</updated>
+    </task>
     <servers />
   </component>
 </project>

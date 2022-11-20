@@ -23,13 +23,14 @@ public class FunctionalAutomaticTestWeather extends BaseTest {
     final static By FAQ = By.xpath("//ul[@id='support-dropdown-menu']//a[text()='FAQ']");
     final static By HOW_TO_STAR = By.xpath("//ul[@id='support-dropdown-menu']//a[text()='How to start']");
     final static By ASK_A_QUESTION = By.xpath("//ul[@id='support-dropdown-menu']//a[text()='Ask a question']");
+    final static By OPEN_WEATHER = By.tagName("h1");
 
     private void openBaseURL() {
         getDriver().get(BASE_URL);
     }
 
     private void waitForGrayFrameDisappered() {
-        getWait10().until(ExpectedConditions.invisibilityOfElementLocated(By.className("owm-loader-container")));
+        getWait20().until(ExpectedConditions.invisibilityOfElementLocated(By.className("owm-loader-container")));
     }
 
     private void click(By by) {
@@ -161,13 +162,42 @@ public class FunctionalAutomaticTestWeather extends BaseTest {
         openBaseURL();
         getDriver().manage().window().maximize();
         waitForGrayFrameDisappered();
-        click(SIGN_IN);
-        waitForGrayFrameDisappered();
+        click(SUPPORT);
         click(FAQ);
-        waitForGrayFrameDisappered();
         System.out.println(getDriver().getCurrentUrl());
         Assert.assertEquals(getDriver().getCurrentUrl(), expectedResul);
     }
 
+    @Test
+    public void testUrlSupportHowToStart() {
+        String expectedResul = "https://openweathermap.org/appid";
+        openBaseURL();
+        waitForGrayFrameDisappered();
+        click(SUPPORT);
+        click(HOW_TO_STAR);
+        System.out.println(getDriver().getCurrentUrl());
+        Assert.assertEquals(getDriver().getCurrentUrl(), expectedResul);
+    }
+
+    @Test
+    public void testUrlSupportAskAQuestion() {
+        String expectedResul = "https://home.openweathermap.org/questions";
+        openBaseURL();
+        waitForGrayFrameDisappered();
+        click(SUPPORT);
+        click(ASK_A_QUESTION);
+        System.out.println(getDriver().getCurrentUrl());
+        ArrayList<String> windows = new ArrayList(getDriver().getWindowHandles());
+        getDriver().close();
+        Assert.assertEquals(getDriver().switchTo().window(windows.get(1)).getCurrentUrl(), expectedResul);
+    }
+
+    @Test
+    public void testH1ValidName() {
+        String expectedResul = "OpenWeather";
+        openBaseURL();
+        waitForGrayFrameDisappered();
+        Assert.assertEquals(getDriver().findElement(OPEN_WEATHER).getText(), expectedResul);
+    }
 
 }
